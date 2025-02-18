@@ -5,14 +5,12 @@
 
 CC = g++
 
-# Compile with all errors and warnings
+# Compiles with all errors and warnings
 CFLAGS = -c -Wall -Wextra  
 
 TARGET = employee
 
-all: $(TARGET)
-
-# Link all object files and create the executable
+# Links all the files together
 $(TARGET): main.o Employee.o Officer.o Supervisor.o
 	$(CC) -o $(TARGET) main.o Employee.o Officer.o Supervisor.o
 
